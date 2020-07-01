@@ -1,14 +1,22 @@
 {
     "python.pythonPath": ".venv/bin/python",
     "python.linting.mypyEnabled": true,
+    "python.linting.mypyPath": "${workspaceFolder}/.venv/bin/mypy",
     "python.linting.pylintEnabled": true,
     "python.analysis.disabled": ["use-before-def"],
     "python.formatting.provider": "black",
+    "python.formatting.blackPath": "${workspaceFolder}/.venv/bin/black",
     "python.formatting.blackArgs": ["--skip-string-normalization"],
+    "python.sortImports.path": "${workspaceFolder}/.venv/bin/isort",
     "[python]": {
-      "editor.tabSize": 4, // インデントレベルは「4」
-      "editor.formatOnSave": true // 保存時に自動整形を実施
+        "editor.tabSize": 4, // インデントレベルは「4」
+        "editor.formatOnSave": true, // 保存時に自動整形を実施
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+            "source.organizeImports.python": true
+        }
     },
+    "autoDocstring.docstringFormat": "google",
 
     "eslint.alwaysShowStatus": true,
     "editor.codeActionsOnSave": {
