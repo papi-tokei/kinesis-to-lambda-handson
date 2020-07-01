@@ -1,0 +1,17 @@
+{
+    "python.pythonPath": ".venv/bin/python",
+    "python.linting.mypyEnabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.analysis.disabled": ["use-before-def"],
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": ["--skip-string-normalization"],
+    "[python]": {
+      "editor.tabSize": 4, // インデントレベルは「4」
+      "editor.formatOnSave": true // 保存時に自動整形を実施
+    },
+
+    "eslint.alwaysShowStatus": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+}
